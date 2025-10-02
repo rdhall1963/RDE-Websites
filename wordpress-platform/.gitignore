@@ -1,0 +1,14 @@
+wordpress/
+node_modules/
+vendor/
+*.log
+.env
+.DS_Store
+*.sql
+*.zip
+*.tar.gz
+wp-config.php
+.htaccess
+uploads/
+cache/
+backups/

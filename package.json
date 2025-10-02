@@ -1,0 +1,44 @@
+{
+  "name": "rde-websites",
+  "version": "1.0.0",
+  "description": "Full-stack development platform for websites with WordPress, content management, and payment integration",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm run install:wordpress && npm run install:tools",
+    "install:wordpress": "cd wordpress-platform && npm install && composer install",
+    "install:tools": "cd content-management-tools && pip install -r requirements.txt",
+    "build": "npm run build:wordpress",
+    "build:wordpress": "cd wordpress-platform && npm run build",
+    "dev": "cd wordpress-platform && npm run dev",
+    "lint": "npm run lint:js && npm run lint:php",
+    "lint:js": "eslint . --ext .js",
+    "lint:php": "cd wordpress-platform && composer run lint",
+    "test": "npm run test:js && npm run test:php",
+    "test:js": "jest",
+    "test:php": "cd wordpress-platform && composer run test",
+    "setup": "chmod +x wordpress-platform/scripts/setup.sh && ./wordpress-platform/scripts/setup.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdhall1963/RDE-Websites.git"
+  },
+  "keywords": [
+    "wordpress",
+    "woocommerce",
+    "elementor",
+    "payment-gateway",
+    "subscription-management",
+    "content-management",
+    "full-stack"
+  ],
+  "author": "RDE Websites",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/rdhall1963/RDE-Websites/issues"
+  },
+  "homepage": "https://github.com/rdhall1963/RDE-Websites#readme",
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "jest": "^29.0.0"
+  }
+}

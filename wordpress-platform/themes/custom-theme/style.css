@@ -1,0 +1,73 @@
+/*
+Theme Name: RDE Custom Theme
+Theme URI: https://github.com/rdhall1963/RDE-Websites
+Author: RDE Websites
+Author URI: https://github.com/rdhall1963
+Description: Custom WordPress theme optimized for WooCommerce and Elementor with multilingual support
+Version: 1.0.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: rde-theme
+Tags: e-commerce, elementor, multilingual, responsive, seo-friendly
+*/
+
+/* 
+ * Base styles will be imported here
+ * Theme is designed to work primarily with Elementor
+ */
+
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #333333;
+    --accent-color: #ff6600;
+    --text-color: #333333;
+    --background-color: #ffffff;
+    --border-color: #e0e0e0;
+    --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* WooCommerce compatibility */
+.woocommerce-page .product {
+    margin-bottom: 30px;
+}
+
+/* Elementor compatibility */
+.elementor-section {
+    position: relative;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+}
