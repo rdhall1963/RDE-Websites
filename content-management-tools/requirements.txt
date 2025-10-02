@@ -1,0 +1,13 @@
+# Python dependencies for content management tools
+
+# Image processing for gallery management
+Pillow>=10.0.0
+
+# Email automation
+secure-smtplib>=0.1.1
+
+# File management
+pathlib>=1.0.1
+
+# Data handling
+python-dotenv>=1.0.0
